@@ -1,0 +1,20 @@
+# Note: This file is managed by Puppet.
+# Author: Richard Hillmann <rhillmann@intelliad.de>
+[Unit]
+Description=DNS-based service discovery for Mesos
+After=network.target
+Wants=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+User=root
+Type=simple
+KillMode=mixed
+Restart=always
+TimeoutStopSec=30
+StandardOutput=syslog
+StandardError=inherit
+
+ExecStart=<%= @binary %> -logtostderr -config <%= @config %>

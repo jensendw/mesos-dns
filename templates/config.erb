@@ -1,0 +1,30 @@
+{
+<%- unless @mesos_zk.nil? -%>
+  "zk": "<%=@mesos_zk%>",
+  "zkDetectionTimeout": <%=@zk_detection_timeout%>,
+<%- end -%>
+<%- unless @mesos_master.nil?  -%>
+  "masters": <%=@mesos_master%>,
+<%- end -%>
+  "refreshSeconds": <%=@refresh_seconds%>,
+  "stateTimeoutSeconds": <%=@state_timeout_seconds%>,
+  "ttl": <%=@ttl%>,
+  "domain": "<%=@domain%>",
+  "port": <%=@port%>,
+  "resolvers": <%= @resolvers.inspect %>,
+  "timeout": <%=@timeout%>,
+  "listener": "<%=@listener%>",
+  "dnson": <%=@dns_on%>,
+  "httpon": <%=@http_on%>,
+  "httpport": <%=@http_port%>,
+  "externalon": <%=@external_on%>,
+  "SOAMname": "<%=@soa_mname%>",
+  "SOARname": "<%=@soa_rname%>",
+  "SOARefresh": <%=@soa_refresh%>,
+  "SOARetry": <%=@soa_retry%>,
+  "SOAExpire": <%=@soa_expire%>,
+  "SOAMinttl": <%=@soa_minttl%>,
+  "recurseon": <%=@recurse_on%>,
+  "enforceRFC952": <%=@enforce_rfc952%>,
+  "IPSources": <%=@ip_sources.inspect %>
+}
