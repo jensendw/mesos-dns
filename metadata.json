@@ -1,5 +1,5 @@
 {
-    "name": "jensendw/mesos-dns",
+    "name": "jensendw/mesosdns",
     "version": "0.0.1",
     "author": "Daniel jensen <jensendw@gmail.com>",
     "summary": "Puppet module for mesos-dns - An DNS-based service discovery for Mesos.",
